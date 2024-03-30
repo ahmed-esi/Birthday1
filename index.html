@@ -9,6 +9,30 @@ Please follow my tiktok. Thank you -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I LOVE YOU</title>
     <link rel="stylesheet" href="style.css">
+<style>
+        #refresh-btn {
+            background-color: #ff43b6;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #refresh-btn:hover {
+            background-color: #c22887;
+        }
+    </style>
+
+
+
+
 </head>
 <body>
 
@@ -57,19 +81,13 @@ Please follow my tiktok. Thank you -->
     <div class="flower__glass"></div>
 </div>
 
-   <button id="rewind-btn" type="button">Click here to rewind the animation</button>
- 
-    <script>
-  const rewindBtn = document.getElementById("rewind-btn");
-  const flowers = document.querySelectorAll(".flower__leaf");
+   <button id="refresh-btn" type="button">Click here to rewind the animation</button>
 
-  rewindBtn.addEventListener("click", () => {
-    flowers.forEach((flower) => {
-      flower.style.animation = "";
-      flower.style.transform = "rotate(0)";
-      flower.offsetWidth; // For ensuring the browser re-calculates the width
-      flower.style.animation = "open-flower 2s 1s backwards";
-    });
+<script>
+  const refreshBtn = document.getElementById("refresh-btn");
+
+  refreshBtn.addEventListener("click", () => {
+    location.reload();
   });
 </script>
 
