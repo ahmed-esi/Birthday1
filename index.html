@@ -1,55 +1,35 @@
-<!-- Tiktok : @imsba
-Please follow my tiktok. Thank you -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I LOVE YOU</title>
+    <title>I <3 u </title>
     <link rel="stylesheet" href="style.css">
-<style>
+    <style>
         #refresh-btn {
             background-color: #ff43b6;
             border: none;
             border-radius: 5px;
             color: white;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 20px;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            margin: 20px;
             transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display: block;
+            position: absolute;
+            top : 13% ;
+            
+
         }
 
         #refresh-btn:hover {
             background-color: #c22887;
         }
-   .center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-        }
-
-        .center .flower {
-            position: absolute;
-            bottom: 0;
-        }
-
-        .center .refresh-btn-container {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-
-</style>
+    </style>
 
 
 
@@ -102,7 +82,7 @@ Please follow my tiktok. Thank you -->
     <div class="flower__glass"></div>
 </div>
 
-   <button id="refresh-btn" type="button">Click here to rewind the animation</button>
+   <button id="refresh-btn" type="button">Click here to repeat the animation</button>
 
 <script>
   const refreshBtn = document.getElementById("refresh-btn");
