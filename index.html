@@ -56,7 +56,26 @@ Please follow my tiktok. Thank you -->
     </div>
     <div class="flower__glass"></div>
 </div>
+<script>
+  const rewindBtn = document.getElementById("rewind-btn");
+  const flowers = document.querySelectorAll(".flower__leaf");
 
+  rewindBtn.addEventListener("click", () => {
+    flowers.forEach((flower) => {
+      flower.style.animationPlayState = "paused";
+      flower.style.transform = "rotate(0)";
+      flower.style.animation = "";
+    });
+
+    setTimeout(() => {
+      flowers.forEach((flower) => {
+        flower.style.animation = "";
+        flower.offsetWidth; // For ensuring the browser re-calculates the width
+        flower.style.animation = "open-flower 2s 1s backwards";
+      });
+    }, 10);
+  });
+</script>
 
 </body>
 </html>
