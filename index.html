@@ -11,7 +11,7 @@ Please follow my tiktok. Thank you -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button id="rewind-btn" type="button">Click here to rewind the animation</button>
+
 <div class="flower">
     <div class="f-wrapper">
         <div class="flower__line"></div>
@@ -56,24 +56,20 @@ Please follow my tiktok. Thank you -->
     </div>
     <div class="flower__glass"></div>
 </div>
-<script>
+
+   <button id="rewind-btn" type="button">Click here to rewind the animation</button>
+ 
+    <script>
   const rewindBtn = document.getElementById("rewind-btn");
   const flowers = document.querySelectorAll(".flower__leaf");
 
   rewindBtn.addEventListener("click", () => {
     flowers.forEach((flower) => {
-      flower.style.animationPlayState = "paused";
-      flower.style.transform = "rotate(0)";
       flower.style.animation = "";
+      flower.style.transform = "rotate(0)";
+      flower.offsetWidth; // For ensuring the browser re-calculates the width
+      flower.style.animation = "open-flower 2s 1s backwards";
     });
-
-    setTimeout(() => {
-      flowers.forEach((flower) => {
-        flower.style.animation = "";
-        flower.offsetWidth; // For ensuring the browser re-calculates the width
-        flower.style.animation = "open-flower 2s 1s backwards";
-      });
-    }, 10);
   });
 </script>
 
